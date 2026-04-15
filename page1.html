@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details programme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    @import
+    url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+    <style>
+        body {
+            background-color: #032C60;
+            margin: 0;
+            font-family: "Roboto Condensed", sans-serif;
+        }
+
+        header {
+            height: 90px;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            box-shadow: 0 0 5px 0;
+
+        }
+
+        .logo {
+            background-image: url('image/logo\ projet\ [Récupéré]-02.jpg');
+            background-size: cover;
+            width: 80px;
+            height: 80px;
+        }
+
+        #check {
+            display: none;
+        }
+
+        .burger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .ul {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .B {
+            height: 90px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+
+        }
+
+        .butcontact {
+            width: 110px;
+            height: 35px;
+            text-align: center;
+            background-color: #66011F;
+            color: white;
+            border: none;
+            border-radius: 25px 25px 25px 25px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .butcontact:hover {
+            background-color: #032C60;
+            cursor: pointer;
+        }
+
+        .a {
+            list-style: none;
+            text-decoration: none;
+            color: #032C60;
+        }
+
+        .bb {
+            list-style: none;
+            color: white;
+            text-decoration: none;
+        }
+
+        .a:hover {
+            color: white;
+            background-color: #66011F;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        /* section musculation */
+        .musculation {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 80px;
+            width: 90%;
+            height: auto;
+        }
+
+        .muscula {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 500px;
+            width: 100%;
+        }
+
+        .muscula1 {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            height: auto;
+            width: 100%;
+        }
+
+        .muscula0 {
+            margin-top: 50px;
+            height: auto;
+            width: 100%;
+        }
+
+        .h2mu {
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            width: 48%;
+            text-align: center;
+        }
+
+        .muscula2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+            height: 500px;
+            width: 100%;
+        }
+
+        .partie1 {
+            width: 40%;
+            height: 40%;
+            text-align: justify;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .ph1 {
+            color: white;
+        }
+
+        .but {
+            width: 200px;
+            padding: 10px;
+            background-color: #66011F;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .but1 {
+            width: 200px;
+            padding: 10px;
+            background-color: white;
+            color: #66011F;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .but:hover {
+            background-color: white;
+            color: #66011F;
+        }
+
+        .but1:hover {
+            background-color: #66011F;
+            color: white;
+        }
+
+        .partie2 {
+            border-radius: 25px;
+            background-image: url('image/salle.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            width: 45%;
+            height: 90%;
+        }
+
+        .h2par1 {
+            color: #66011F;
+        }
+
+        .par1 {
+            color: white;
+            font-size: 16px;
+            margin-left: 30px;
+            margin-top: 250px;
+            width: 70%;
+            height: 100px;
+        }
+
+        .partie3a {
+            border-radius: 25px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url('image/a1.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            width: 100%;
+            height: 100%;
+            transition: agrandir 0.3s ease;
+        }
+
+        .partie3a:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 5px 0 white;
+        }
+
+        .partie3b {
+            border-radius: 25px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url('image/a2.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            width: 100%;
+            height: 100%;
+            transition: agrandir 0.3s ease;
+        }
+
+        .partie3b:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 5px 0 white;
+        }
+
+        .partie3c {
+            border-radius: 25px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url('image/a3.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            width: 100%;
+            height: 100%;
+            transition: agrandir 0.3s ease;
+        }
+
+        .partie3c:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 5px 0 white;
+        }
+
+        .partie3d {
+            border-radius: 25px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url('image/a4.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            width: 100%;
+            height: 100%;
+            transition: agrandir 0.3s ease;
+        }
+
+        .partie3d:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 5px 0 white;
+        }
+
+        .partie4 {
+            border: 2px solid white;
+            border-radius: 25px;
+            background-image: url('image/fin.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 45%;
+            height: 90%;
+        }
+
+        .partie5 {
+            text-align: center;
+            width: 45%;
+            height: 40%;
+        }
+
+        /* Section footer */
+        footer {
+            height: 80px;
+            background-color: black;
+            color: white;
+        }
+
+        .Z {
+            height: 90px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .fa-brands {
+            margin-top: 22px;
+            color: white;
+        }
+
+        .par {
+            width: 350px;
+            height: 20px;
+            font-size: 15px;
+        }
+
+        /* Partie responsive burger tablette et mobile */
+        @media (max-width: 768px) {
+
+            .burger {
+                display: block;
+            }
+
+            .ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 90px;
+                right: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px 0;
+                height: auto;
+            }
+
+            .ul a {
+                padding: 10px;
+                display: block;
+            }
+
+            #check:checked+.burger+.ul {
+                display: flex;
+            }
+        }
+
+        /* Responsivité Tablette */
+
+        @media (max-width: 768px) {
+            .muscula {
+                flex-direction: column;
+                height: auto;
+                gap: 20px;
+            }
+
+            .partie1 {
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
+
+            .partie2 {
+                width: 100%;
+                height: 300px;
+            }
+
+            .muscula1 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                height: auto;
+            }
+
+            .partie3a,
+            .partie3b,
+            .partie3c,
+            .partie3d {
+                height: 300px;
+            }
+
+            .par1 {
+                margin-top: 180px;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .muscula2 {
+                flex-direction: column;
+                height: auto;
+                gap: 20px;
+                margin-top: 50px;
+            }
+
+            .partie4 {
+                width: 100%;
+                height: 250px;
+            }
+
+            .partie5 {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Responsivité Mobile */
+
+        @media (max-width: 414px) {
+
+            .musculation {
+                width: 80%;
+            }
+
+            body,html{
+                overflow-x: hidden;
+            }
+
+            .ul {
+                width: 100%;
+            }
+
+            .h2mu {
+                width: 100%;
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .h1_5 {
+                font-size: 25px;
+            }
+
+            .but,
+            .but1 {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .partie2 {
+                height: 220px;
+            }
+
+
+            .partie3a,
+            .partie3b,
+            .partie3c,
+            .partie3d {
+                height: 250px;
+                min-height: 250px;
+            }
+
+            .par1 {
+                height: auto;
+                margin-top: 140px;
+                font-size: 14px;
+            }
+
+            footer {
+                height: auto;
+                padding: 20px 0;
+            }
+
+            .Z {
+                flex-direction: column;
+                height: auto;
+                gap: 10px;
+            }
+
+            .par {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="B">
+            <!-- partie logo -->
+            <div class="logo"></div>
+            <!-- partie navigation -->
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="burger">
+                    <i class="fa-solid fa-bars" style="color: #032c60;"></i>
+                </label>
+                <ul class="ul">
+                    <a href="Index.html#S" class="a">
+                        <li>Acceuil</li>
+                    </a>
+                    <a href="Index.html#P" class="a">
+                        <li>Programme</li>
+                    </a>
+                    <a href="Index.html#O" class="a">
+                        <li>Tarifs</li>
+                    </a>
+                    <a href="Index.html#R" class="a">
+                        <li>Coachs</li>
+                    </a>
+                    <a href="Index.html#T" class="a">
+                        <li>Inscription</li>
+                    </a>
+                    <button class="butcontact"><a class="bb" href="Index.html#T">Contact</a></button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- section details programme -->
+    <section class="musculation">
+        <div class="muscula">
+            <div class="partie1">
+                <h1>LIBÉREZ VOTRE POTENTIEL</h1>
+                <p class="ph1">Rejoignez une communauté où les objectifs
+                    sont atteints, la force se construit et le potentiel
+                    devient pouvoir..</p>
+                <a href="Index.html#form"><button class="but">Commencer</button></a>
+                <a href="page2.html"><button class="but1"> Explorer plus</button></a>
+            </div>
+            <div class="partie2"></div>
+        </div>
+        <div class="muscula0">
+            <h2 class="h2mu">Découvrez les programmes parfaits pour correspondre à
+                vos objectifs et à votre niveau de forme physique.</h2>
+            <div class="muscula1">
+                <div class="partie3a">
+                    <div class="par1">
+                        <h2 class="h2par1">Entraînement Personnel</h2>
+                        <p>Un coaching individuel adapté à vos
+                            objectifs, votre emploi du temps et votre
+                            niveau</p>
+                    </div>
+                </div>
+                <div class="partie3b">
+                    <div class="par1">
+                        <h2 class="h2par1">Entraînement de Force</h2>
+                        <p>Développez vos muscles, augmentez
+                            votre puissance et transformez votre
+                            physique</p>
+                    </div>
+                </div>
+                <div class="partie3c">
+                    <div class="par1">
+                        <h2 class="h2par1">Cours HIIT</h2>
+                        <p>Entraînement par intervalles à haute
+                            intensité qui brûle des calories et renforce
+                            l'endurance en un temps record</p>
+                    </div>
+                </div>
+                <div class="partie3d">
+                    <div class="par1">
+                        <h2 class="h2par1">Entraînement Fitness</h2>
+                        <p>Un coaching axé sur vos objectifs
+                            uniques, votre emploi du temps et votre
+                            niveau de forme</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="muscula2">
+            <div class="partie4"></div>
+            <div class="partie5">
+                <h1 class="h1_5">DONNEZ FORME À VOTRE <br>
+                    CORPS</h1>
+                <p class="ph1">Chez SUNUGAL SPORT 221, nous vous aidons à développer votre force,
+                    votre confiance et des habitudes durables. Avec des coachs experts et des
+                    programmes éprouvés, nous vous guidons vers votre meilleure forme.</p>
+            </div>
+        </div>
+    </section>
+    <!-- section footer -->
+    <footer>
+        <div class="Z">
+            <p class="par">© Copyright 2026 Sunugal sport 221-tous droits reserver.</p>
+            <div class="foot">
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                <a href="https://x.com/?lang=fr" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

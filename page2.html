@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails Coachs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="@import
+    url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap')"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #032C60;
+            margin: 0;
+            font-family: "Roboto Condensed", sans-serif;
+        }
+
+        header {
+            height: 90px;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            box-shadow: 0 0 5px 0;
+
+        }
+
+        .logo {
+            background-image: url('image/logo\ projet\ [Récupéré]-02.jpg');
+            background-size: cover;
+            width: 80px;
+            height: 80px;
+        }
+
+        #check {
+            display: none;
+        }
+
+        .burger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .ul {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .B {
+            height: 90px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+
+        }
+
+        .butcontact {
+            width: 110px;
+            height: 35px;
+            text-align: center;
+            background-color: #66011F;
+            color: white;
+            border: none;
+            border-radius: 25px 25px 25px 25px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .butcontact:hover {
+            background-color: #032C60;
+            cursor: pointer;
+        }
+
+        .a {
+            list-style: none;
+            text-decoration: none;
+            color: #032C60;
+        }
+
+        .bb {
+            list-style: none;
+            color: white;
+            text-decoration: none;
+        }
+
+        .a:hover {
+            color: white;
+            background-color: #66011F;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+
+        /* section coachs */
+        .coach {
+            margin-top: 140px;
+            width: 90%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .co {
+            position: -webkit-sticky;
+            position: sticky;
+            margin-top: 50px;
+            top: 90px;
+            width: 35%;
+            height: auto;
+            background-image: url('image/coach1.jpg');
+            background-size: cover;
+
+        }
+
+        .detailsc {
+            margin-top: 50px;
+            width: 61%;
+            height: auto;
+        }
+
+        .bio {
+            border: 1px solid #66011F;
+            width: 100%;
+            background-color: #1E2939;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .bio1 {
+            border: 1px solid #66011F;
+            margin-top: 20px;
+            width: 100%;
+            background-color: #1E2939;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .real {
+            margin-bottom: 15px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-left: auto;
+            width: 90%;
+            margin-right: auto;
+            height: auto;
+        }
+
+        .rea {
+            border-radius: 10px;
+            width: 100%;
+            height: 45px;
+            background-color: #66011F;
+        }
+
+        .list {
+            margin-top: 12px;
+            color: white;
+            margin-left: 30px;
+        }
+
+        .bio2 {
+            border: 1px solid #66011F;
+            margin-top: 20px;
+            width: 100%;
+            background-color: #1E2939;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .bio3 {
+            border: 1px solid #66011F;
+            margin-top: 20px;
+            width: 100%;
+            background-color: #1E2939;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        h2 {
+            margin-left: 8px;
+            margin-top: 20px;
+            color: white;
+        }
+
+        .liste {
+            opacity: 90%;
+            color: white;
+        }
+
+        .disp {
+            margin-bottom: 15px;
+            width: 90%;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dis {
+            width: 18%;
+            height: 80px;
+            background-color: #66011F;
+            border-radius: 10px;
+        }
+
+        .paragraphe {
+            margin-left: 30px;
+            font-size: 16px;
+        }
+
+        .progra {
+            margin-bottom: 12px;
+            padding: 5px;
+            border-radius: 15px;
+            margin-left: 40px;
+            height: auto;
+            width: 35%;
+            background-color: #66011F;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .prog {
+            border-radius: 10px;
+            width: 80px;
+            height: 60px;
+            background-image: url('image/muscu.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .imagec {
+            border: 1px solid #66011F;
+            width: 100%;
+            height: 550px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url('image/Coach\ assane\ fall.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 30px;
+            transition: agrandir 0.3s ease;
+        }
+
+        .imagec:hover {
+            transform: scale(1.02);
+        }
+
+        p {
+            width: 95%;
+            opacity: 98%;
+            margin-left: 15px;
+            color: white;
+        }
+
+
+        .para {
+            margin-left: 15px;
+            margin-top: 450px;
+            text-align: center;
+            color: #66011F;
+            background-color: white;
+            width: 150px;
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            margin-left: 20px;
+            color: white;
+        }
+
+        .lien {
+            margin-top: 6px;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .lie {
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            background-color: #1E2939;
+            height: 20px;
+            width: 40%;
+
+        }
+
+        .liens {
+            text-decoration: none;
+            color: white;
+        }
+
+        .butta {
+            cursor: pointer;
+            font-size: 15px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            background-color: #66011F;
+            padding: 10px;
+            width: 100%;
+        }
+
+        /* section autres */
+        .autres {
+            margin-top: 80px;
+            width: 90%;
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .h3a {
+            font-size: 33px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+
+        .aucoachs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            height: 400px;
+        }
+
+        .auc {
+            border-radius: 25px;
+            background-color: #66011F;
+            width: 30%;
+            height: 100%;
+            transition: agrandir 0.3s ease;
+        }
+
+        .auc:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 5px 0 white;
+        }
+
+        .au {
+            border-radius: 0 0 25px 25px;
+            margin-top: 40px;
+            height: 100px;
+            width: 100%;
+            background-color: #1E2939;
+        }
+
+        .au1 {
+            border-radius: 25px;
+            margin-top: 40px;
+            background-image: url('image/asta\ faye.jpg');
+            background-size: cover;
+            margin-left: auto;
+            margin-right: auto;
+            height: 220px;
+            width: 80%;
+        }
+
+        .au2 {
+            border-radius: 25px;
+            margin-top: 40px;
+            background-image: url('image/kadia\ sow.jpg');
+            background-size: cover;
+            margin-left: auto;
+            margin-right: auto;
+            height: 220px;
+            width: 80%;
+        }
+
+        .au3 {
+            border-radius: 25px;
+            margin-top: 40px;
+            background-image: url('image/alioune\ gueye.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-left: auto;
+            margin-right: auto;
+            height: 220px;
+            width: 80%;
+        }
+
+        .rh3 {
+            margin-right: auto;
+            margin-left: auto;
+            border: 2px solid #1E2939;
+            width: 60%;
+            height: 80%;
+        }
+
+        .h3b {
+            margin-left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .ph3 {
+            color: white;
+
+        }
+
+        /* Section footer */
+        footer {
+            height: 80px;
+            background-color: black;
+            color: white;
+        }
+
+        .Z {
+            height: 90px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .fa-brands {
+            margin-top: 22px;
+            color: white;
+        }
+
+        .par {
+            width: 350px;
+            height: 20px;
+            font-size: 15px;
+        }
+
+        /* Partie responsive burger tablette et mobile */
+        @media (max-width: 768px) {
+
+            .burger {
+                display: block;
+            }
+
+            .ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 90px;
+                right: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px 0;
+                height: auto;
+            }
+
+            .ul a {
+                padding: 10px;
+                display: block;
+            }
+
+            #check:checked~.ul {
+                display: flex;
+            }
+        }
+
+        /* Responsivité tablette */
+
+        @media (max-width: 768px) {
+
+            .coach {
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 100px;
+            }
+
+            .detailsc {
+                width: 100%;
+            }
+
+            .real {
+                margin-bottom: 15px;
+            }
+            .co {
+                height: auto;
+                width: 100%;
+                position: relative;
+                top: 0;
+            }
+
+            .para {
+                margin-top: 650px;
+            }
+
+            .imagec {
+                height: 750px;
+            }
+
+            .disp {
+                flex-wrap: wrap;
+                gap: 10px;
+                height: auto;
+            }
+
+            .dis {
+                width: 48%;
+            }
+
+            .progra {
+                width: 60%;
+                margin: auto;
+                margin-bottom: 15px;
+            }
+
+            .aucoachs {
+                width: 100%;
+                gap: 20px;
+            }
+
+            .auc {
+                width: 32%;
+            }
+        }
+
+        /* Responsivité mobile */
+
+        @media (max-width: 480px) {
+
+            .coach {
+                width: 95%;
+                margin-top: 80px;
+            }
+
+            .imagec {
+                height: 400px;
+            }
+
+            .para {
+                margin-top: 310px;
+            }
+
+            .disp {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+
+            .dis {
+                width: 100%;
+            }
+
+            .real {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .progra {
+                width: 90%;
+                margin: auto;
+                margin-bottom: 15px;
+            }
+
+            .aucoachs {
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+                gap: 20px;
+            }
+
+            .auc {
+                width: 90%;
+                height: auto;
+            }
+
+            .h3a {
+                font-size: 25px;
+            }
+
+            .rh3 {
+                width: 47%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            footer {
+                margin-top: 730px;
+                height: auto;
+                padding: 8px 0;
+            }
+
+            .Z {
+                flex-direction: column;
+                gap: 10px;
+                height: auto;
+            }
+
+            .par {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="B">
+            <!-- partie logo -->
+            <div class="logo"></div>
+            <!-- partie navigation -->
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="burger">
+                    <i class="fa-solid fa-bars" style="color: #032c60;"></i>
+                </label>
+                <ul class="ul">
+                    <a href="Index.html#S" class="a">
+                        <li>Acceuil</li>
+                    </a>
+                    <a href="Index.html#P" class="a">
+                        <li>Programme</li>
+                    </a>
+                    <a href="Index.html#O" class="a">
+                        <li>Tarifs</li>
+                    </a>
+                    <a href="Index.html#R" class="a">
+                        <li>Coachs</li>
+                    </a>
+                    <a href="Index.html#T" class="a">
+                        <li>Inscription</li>
+                    </a>
+                    <button class="butcontact"><a class="bb" href="Index.html#T">Contact</a></button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- section coachs -->
+    <section class="coach">
+        <!-- contenu de la section coachs -->
+
+        <div class="co">
+            <div class="imagec">
+                <p class="para">Musculation & Force</p>
+                <h1>Assane Fall</h1>
+            </div>
+            <div class="lien">
+                <div class="lie"><a href="https://www.linkedin.com/" target="_blank" class="liens">linkdin</a></div>
+                <div class="lie"><a href="https://www.instagram.com/" target="_blank" class="liens">Instagramme</a>
+                </div>
+            </div>
+            <a href="https://www.whatsapp.com/?lang=fr" target="_blank"><button class="butta">Réserver une séance</button></a>
+        </div>
+        <div class="detailsc">
+            <div class="bio">
+                <div class="detail">
+                    <h2>À propos</h2>
+                    <p>Assane Fall est un passionné de musculation depuis son adolescence. Ancien champion régional de
+                        powerlifting, il cumule plus de 10 ans d'expérience dans le coaching sportif de haut niveau.
+                        <br><br>
+
+                        Sa philosophie repose sur une approche scientifique de l'entraînement, combinant les dernières
+                        recherches en physiologie de l'exercice avec une attention personnalisée pour chaque athlète.
+                    </p>
+                    <h2>Certifications:</h2>
+                    <ul class="liste">
+                        <li>BPJEPS Activités de la Forme mention Haltérophilie-Musculation</li>
+                        <li>Certification Strength & Conditioning (NSCA)</li>
+                        <li>Diplôme de Nutrition Sportive</li>
+                    </ul>
+                    <h2>Spécialités:</h2>
+                    <ul class="liste">
+                        <li>Programmes de prise de masse musculaire</li>
+                        <li>Préparation compétitions de powerlifting</li>
+                        <li>Réathlétisation post-blessure</li>
+                        <li>Coaching personnalisé force athlétique</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bio1">
+                <h2>Réalisations</h2>
+                <div class="real">
+                    <div class="rea">
+                        <li class="list">Champion régional de powerlifting 2019</li>
+                    </div>
+                    <div class="rea">
+                        <li class="list">Plus de 500 clients transformés</li>
+                    </div>
+                    <div class="rea">
+                        <li class="list">
+                            10+ ans d'expérience
+                        </li>
+                    </div>
+                    <div class="rea">
+                        <li class="list">Certifié NSCA</li>
+                    </div>
+                </div>
+            </div>
+            <div class="bio2">
+                <h2>Disponibilités</h2>
+                <div class="disp">
+                    <div class="dis">
+                        <p class="paragraphe"><strong>Lundi</strong><br><br>6h-12h</p>
+                    </div>
+                    <div class="dis">
+                        <p class="paragraphe"><strong>Mardi</strong><br><br>14h-21h</p>
+                    </div>
+                    <div class="dis">
+                        <p class="paragraphe"><strong>Mercredi</strong><br><br>6h-12h</p>
+                    </div>
+                    <div class="dis">
+                        <p class="paragraphe"><strong>Jeudi</strong><br><br>14h-21h</p>
+                    </div>
+                    <div class="dis">
+                        <p class="paragraphe"><strong>Vendredi</strong><br><br>6h-12h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bio3">
+                <h2>Programmes encadrés</h2>
+                <div class="progra">
+                    <div class="prog"></div>
+                    <p><strong>Musculation</strong><br>60-90min</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- section autres -->
+    <section class="autres">
+        <h3 class="h3a">Découvrez nos autres coachs</h3>
+        <div class="aucoachs">
+            <div class="auc">
+                <div class="au1"></div>
+                <div class="au">
+                    <div class="rh3">
+                        <h3 class="h3b">Asta Faye</h3>
+                        <p class="ph3">Boxe & Combat</p>
+                    </div>
+                </div>
+            </div>
+            <div class="auc">
+                <div class="au2"></div>
+                <div class="au">
+                    <div class="rh3">
+                        <h3 class="h3b">Kadia Sow</h3>
+                        <p class="ph3">Yoga & Pilate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="auc">
+                <div class="au3"></div>
+                <div class="au">
+                    <div class="rh3">
+                        <h3 class="h3b">Alioune Gueye</h3>
+                        <p class="ph3">CrossFit & HIIT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section footer -->
+    <footer>
+        <div class="Z">
+            <p class="par">© Copyright 2026 Sunugal sport 221-tous droits reserver.</p>
+            <div class="foot">
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                <a href="https://x.com/?lang=fr" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
